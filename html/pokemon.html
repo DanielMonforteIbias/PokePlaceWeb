@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon</title>
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+    <link rel="icon" href="../imgs/logo.png" type="image/x-icon">
+    <script src="../js/fetchpokemon.js" async></script>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html" class="no-hover"><img src="../imgs/logo.png" alt="Logo Pokédex" class="headerlogo"></a>
+        <nav>
+            <ul>
+                <li class="menuitem">
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li class="menuitem">
+                    <a href="generaciones.html">Generaciones</a>
+                    <ul class="submenu">
+                        <li><a href="gen1.html?gen=1">Generación I</a></li>
+                        <li><a href="gen2.html?gen=2">Generación II</a></li>
+                        <li><a href="gen3.html?gen=3">Generación III</a></li>
+                        <li><a href="gen4.html?gen=4">Generación IV</a></li>
+                        <li><a href="gen5.html?gen=5">Generación V</a></li>
+                        <li><a href="gen6.html?gen=6">Generación VI</a></li>
+                        <li><a href="gen7.html?gen=7">Generación VII</a></li>
+                        <li><a href="gen8.html?gen=8">Generación VIII</a></li>
+                        <li><a href="gen9.html?gen=9">Generación IX</a></li>
+                    </ul>
+                </li>
+                <li class="menuitem menuitem--active">
+                    <a href="pokemon.html">Pokémon</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Pokémon</h1>
+        <div class="filters">
+            <input id="filterName" type="text" placeholder="Nombre">
+            <input id="filterId" type="text" placeholder="Id">
+        </div>
+        <div id="loading" class="loading-container">
+            <div class="loading-spinner"></div>
+            Cargando Pokémon...
+        </div>
+        <div id="pokemon-list"></div>
+        <div class="pagebuttons">
+            <img src="../imgs/icons/leftarrow.png" alt="Anterior" id="back">
+            <img src="../imgs/icons/rightarrow.png" alt="Siguiente" id="next">
+        </div>
+    </main>
+
+    <footer>
+        PokePlace Web 2025 - Daniel Monforte Ibias<br>
+        <a href="../index.html">Volver a inicio</a>
+    </footer>
+    <script src="../js/menu.js"></script>
+    <script src="../js/clickableimages.js"></script>
+</body>
+</html>

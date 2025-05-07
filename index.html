@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokePlace</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="icon" href="imgs/logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="no-hover"><img src="imgs/logo.png" alt="Logo Pokédex" class="headerlogo"></a>
+        <nav>
+            <ul>
+                <li class="menuitem menuitem--active">
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li class="menuitem">
+                    <a href="html/generaciones.html">Generaciones</a>
+                    <ul class="submenu">
+                        <li><a href="html/gen1.html?gen=1">Generación I</a></li>
+                        <li><a href="html/gen2.html?gen=2">Generación II</a></li>
+                        <li><a href="html/gen3.html?gen=3">Generación III</a></li>
+                        <li><a href="html/gen4.html?gen=4">Generación IV</a></li>
+                        <li><a href="html/gen5.html?gen=5">Generación V</a></li>
+                        <li><a href="html/gen6.html?gen=6">Generación VI</a></li>
+                        <li><a href="html/gen7.html?gen=7">Generación VII</a></li>
+                        <li><a href="html/gen8.html?gen=8">Generación VIII</a></li>
+                        <li><a href="html/gen9.html?gen=9">Generación IX</a></li>
+                    </ul>
+                </li>
+                <li class="menuitem">
+                    <a href="html/pokemon.html">Pokémon</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="page-title">
+            <img src="imgs/pokeball.png" alt="Pokéball"><h1>PokePlace Web</h1><img src="imgs/pokeball.png" alt="Pokéball">
+        </div>
+        <section id="introduccion">
+            <h2>Bienvenido a PokePlace Web!</h2>
+            <p>En esta web encontrarás información sobre los videojuegos y las generaciones de la saga Pokémon a lo largo de
+                su historia.</p>
+            <p>Pokémon es una gran franquicia perteneciente a Nintendo que se inició en el mundo de los videojuegos en 1996,
+                pasando posteriormente a otros medios como el cine, anime o manga y convirtiéndose en una marca reconocida
+                mundialmente, presente en productos como ropa, peluches y juguetes, entre otros. Su nombre se origina de
+                ポケットモンスタ (Pocket Monsters en japonés).</p>
+            <div class="centered-element"><img src="imgs/pokemonlogo.png" alt="Logo Pokémon" width="300" class="zoomable"></div>
+            <p>Los Pokémon son criaturas fantásticas de todo tipo que conviven con los humanos en este mundo, con poderes y
+                características únicas. Adoptan muchas formas distintas, pudiendo no solo ser similares a los animales, sino
+                también a objetos, criaturas mitológicas, plantas u hongos. Su vínculo con los humanos es variado, siendo
+                frecuente ser entrenados para combatir con otros Pokémon, pero también existiendo como mascotas o ayudantes.
+            </p>
+            <p>En el mundo de los videojuegos, la saga principal pertenece al género de RPG. En estos juegos generalmente se
+                asume el rol de un entrenador, y el objetivo principal consiste en capturar Pokémon y entrenarlos para
+                convertirse en el campeón. Para ello, a lo largo de la aventura el jugador puede hacer uso de las Pokéball
+                para añadir estas criaturas a su equipo, pudiendo llevar un máximo de 6 a la vez, combatiendo con ellos para
+                ganar experiencia, subir de nivel y aprender nuevos movimientos.</p>
+            <div class="centered-element"><img src="imgs/ingame/pokemonbattle2.jpg" alt="Logo Pokémon" width="500" class="zoomable"></div>
+            <p>Los combates de la saga se estructuran en turnos, y en batalla cobran relevancia las estadísticas de cada Pokémon, que definen aspectos como el daño que hacen sus ataques, la reducción de daño al tomar ataques o quién ataca primero. Un aspecto crucial son los tipos de los Pokémon, ya que existe un sistema de efectividades, debilidades e inmunidades entre tipos. También hay diferentes tipos de movimientos que dan lugar a un amplio abanico de estrategias, tanto ofensivas como defensivas, pudiendo hacer daño, causar estados o modificar las estadísticas.</p>
+            <p>En cuanto a la serie de animación, desde 1997 hasta la actualidad se han creado hasta 27 temporadas y 23 películas, y la producción continúa a día de hoy, siendo una franquicia popular tanto para las personas que crecieron con ella como para los nuevos fans.</p>
+        </section>
+        <section id="generaciones">
+            <p>La saga de videojuegos se divide en distintas generaciones que han ido evolucionando desde la creación del
+                primero juego hasta la actualidad. Cada generación incluye nuevas criaturas y una nueva región, entre otras
+                características únicas de cada una.</p>
+            <h2>Lista de generaciones</h2>
+            <nav>
+                <ul>
+                    <li><a href="html/gen1.html?gen=1">Primera generación</a></li>
+                    <li><a href="html/gen2.html?gen=2">Segunda generación</a></li>
+                    <li><a href="html/gen3.html?gen=3">Tercera generación</a></li>
+                    <li><a href="html/gen4.html?gen=4">Cuarta generación</a></li>
+                    <li><a href="html/gen5.html?gen=5">Quinta generación</a></li>
+                    <li><a href="html/gen6.html?gen=6">Sexta generación</a></li>
+                    <li><a href="html/gen7.html?gen=7">Séptima generación</a></li>
+                    <li><a href="html/gen8.html?gen=8">Octava generación</a></li>
+                    <li><a href="html/gen9.html?gen=9">Novena generación</a></li>
+                </ul>
+                También puedes consultar el <a href="html/generaciones.html">Resumen de generaciones</a>.
+            </nav>
+        </section>
+        
+    </main>
+
+    <footer>
+        PokePlace Web 2025 - Daniel Monforte Ibias<br>
+        <a href="index.html">Volver a inicio</a>
+    </footer>
+    <script src="js/menu.js"></script>
+    <script src="js/clickableimages.js"></script>
+</body>
+
+</html>

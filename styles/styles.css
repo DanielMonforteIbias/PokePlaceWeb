@@ -1,0 +1,335 @@
+@font-face {
+    font-family: 'pokemonds';
+    src: url('../fonts/pokemonds.ttf') format('truetype');
+}
+header,footer{
+    color:#EEEEEE;
+    background-color:#222222;
+    padding:10px;
+}
+header{
+    top: 0;
+    z-index: 99;
+    position: sticky;
+    display: flex;
+    align-items: center; 
+    justify-content:left;
+    font-size: 35px;
+    gap:10px;
+    width: 100%;
+    max-height: 20%;
+}
+
+header a,footer a{
+    color: #EEEEEE;
+}
+.headerlogo{
+    width:80px
+}
+.page-title{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+.page-title img {
+    width: 48px;
+    height: auto;
+}
+.centered-element{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+.pagebuttons{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    gap:10px;
+}
+.pagebuttons img{
+    width: 50px;
+}
+
+main{
+    background-color: #FFFFFF;
+    margin: 20px 15%;
+    padding:2rem;
+    flex:1;
+}
+html,body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color:#e6e6e6;
+    background:url('../imgs/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family:'pokemonds';
+    color:#444343;
+    font-size:25px;
+    margin: 0px 0px;
+    overflow:auto; /*Hace que el header se quede sticky siempre, no solo un rato*/
+}
+h1{
+    font-size: 80px;
+}
+h1,h2{
+    text-align: center;
+    margin: 10px 10px;
+}
+h3{
+    margin:5px 0px;
+}
+p{
+    text-align: justify;
+}
+a{
+    color:#444343;  
+}
+a:hover{
+    background-color: #e7e7e7;
+}
+.no-hover:hover{
+    background-color: transparent;
+}
+hr{
+    border: 1px solid #444343;
+    margin:3px 0px 15px 0px;
+}
+li{
+    margin:5px 0px;
+    text-align: justify;
+}
+li:has(hr) {
+    list-style: none;
+}
+img.zoomable:hover{
+    transform: scale(1.05);
+}
+img.zoomable{
+    transition: transform 0.2s ease-in-out;
+}
+.zoom-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+.zoom-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 0 0 20px black;
+    border-radius: 10px;
+}
+.zoom-overlay img:hover {
+    transform: none;
+  }
+  
+figure {
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+}
+figcaption {
+    color: gray;
+}
+table,th,td {
+    border: 2px dashed #444343;
+    border-collapse: collapse;
+} 
+th,td {
+    padding: 10px;
+    text-align: center;
+}
+td p{
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap:10px;
+    display: flex;
+}
+header nav ul a{
+    color: #EEEEEE;
+    text-decoration: none;
+}
+header nav ul a:hover, footer a:hover{
+    background-color: #444;
+}
+header nav ul li {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 10px;
+    list-style: none;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.menuitem:hover .submenu {
+    display: block;
+}
+.menuitem--active a, .submenu .menuitem--active a{
+    color:red
+}
+.submenu a {
+    color:#EEEEEE
+}
+
+.container{
+    display:flex;
+    gap:20px;
+}
+
+.container p{
+    margin:0px 0px;
+}
+
+.pokemon {
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+    position: relative;
+}
+
+.pokemon-info {
+    width: 150px;
+    word-wrap: break-word;
+    text-align: center;
+    margin:0px 0px;
+    position: relative;
+    font-weight: bold;
+}
+
+.pokemon-sprite {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0px auto;
+}
+
+.pokemon-number {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 24px;
+}
+
+.pokemon-sprite, .pagebuttons img {
+    transition: transform 0.2s ease-in-out;
+}
+
+.pokemon-sprite:hover, .pagebuttons img:hover {
+    transform: scale(1.15)
+}
+
+input{
+    font-family: 'pokemonds';
+    font-size: 25px;
+    color:#EEEEEE;
+    background-color: #444;
+}
+input::placeholder{
+    color:#eeeeee94;
+}
+
+
+.loading-container {
+    display: flex; /*El que tendrá al mostrarse*/
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    display: none; /*El que coge al principio*/
+}
+
+.loading-spinner {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+figure img,figure,.centered-element img{
+    max-width: 100%;
+    height: auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media screen and (max-width: 900px) {
+    header {
+        font-size: 24px;
+        gap: 5px;
+    }
+
+    .headerlogo {
+        width: 60px;
+    }
+
+    .page-title {
+        text-align: center;
+    }
+
+    .pagebuttons {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    main {
+        margin: 10px 5%;
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    html, body {
+        font-size: 18px;
+    }
+
+    .pokemon {
+        margin: 0px;
+    }
+
+    .pokemon-info, .pokemon-sprite {
+        width: 100px;
+        height: auto;
+    }
+
+    .pokemon-number {
+        font-size: 16px;
+    }
+
+    input {
+        font-size: 20px;
+    }
+    .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
